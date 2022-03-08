@@ -37,24 +37,29 @@ portaTotalP3 = areaPorta * portaP3
 portaTotalP4 = areaPorta * portaP4
 
 if portaP1 >= 1:
-    alturaP1 >= 2.20
-else:
-    erro = ("A altura da parede precisa ser 30cm maior que a altura da porta!")
+    if alturaP1 >= 2.20:
+        print("Tamanho de porta correta!")
+    else:
+        print("A altura da parede precisa ser 30cm maior que a altura da porta!")
 
 if portaP2 >= 1:
-    alturaP2 >= 2.20
-else:
-    erro = ("A altura da parede precisa ser 30cm maior que a altura da porta!")
+    if alturaP2 >= 2.20:
+        print("Tamanho de porta correta!")
+    else:
+        print("A altura da parede precisa ser 30cm maior que a altura da porta!")
 
 if portaP3 >= 1:
-    alturaP3 >= 2.20
-else:
-    erro = ("A altura da parede precisa ser 30cm maior que a altura da porta!")
+    if alturaP3 >= 2.20:
+        print("Tamanho de porta correta!")
+    else:
+        print("A altura da parede precisa ser 30cm maior que a altura da porta!")
 
 if portaP4 >= 1:
-    alturaP4 >= 2.20
-else:
-    erro = ("A altura da parede precisa ser 30cm maior que a altura da porta!")
+   if alturaP4 >= 2.20:
+        print("Tamanho de porta correta!")
+   else:
+        print("A altura da parede precisa ser 30cm maior que a altura da porta!")
+
 
 # Calculando a área das paredes:
 p1 = larguraP1 * alturaP1;
@@ -102,30 +107,30 @@ varP2 = resultPortaP2 + resultJanP2
 varP3 = resultPortaP3 + resultJanP3 
 varP4 = resultPortaP4 + resultJanP4 
 
-porcentP1 = (50/100) * p1
-porcentP2 = (50/100) * p2
-porcentP3 = (50/100) * p3
-porcentP4 = (50/100) * p4
+porcentP1 = p1/2
+porcentP2 = p2/2
+porcentP3 = p3/2
+porcentP4 = p4/2
 
 if varP1 <= porcentP1:
     calcP1 = p1 - varP1
 else:
-    erro = "A área das portas e janelas são inválidos!"
+    print("A área das portas e janelas são inválidos!")
 
 if varP2 <= porcentP2:
     calcP2 = p2 - varP2
 else:
-    erro = "A área das portas e janelas são inválidos!"
+    print("A área das portas e janelas são inválidos!")
 
 if varP3 <= porcentP3:
     calcP3 = p3 - varP3
 else:
-    erro = "A área das portas e janelas são inválidos!"
+    print("A área das portas e janelas são inválidos!")
 
 if varP4 <= porcentP4:
     calcP4 = p4 - varP4
 else:
-    erro = "A área das portas e janelas são inválidos!"
+    print("A área das portas e janelas são inválidos!")
     
 
 
@@ -150,5 +155,4 @@ else:
     print("Valor inválido!")
 
 
-qtdTinta = (calcP1 / 5)
-print("Você precisará de ",qtdTinta,"l de tinta")
+
