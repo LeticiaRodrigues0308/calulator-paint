@@ -5,7 +5,6 @@ alturaP1 = float(input("Digite a altura da primeira parede: "))
 janP1 = int(input("Digite a quantidade de janelas da priemira parede: "))
 portaP1 = int(input("Digite a quantidade de portas da primeira parede: "))
 
-
 larguraP2 = float(input("Digite a largura da segunda parede: "))
 alturaP2 = float(input("Digite a altura da segunda parede: "))
 janP2 = int(input("Digite a quantidade de janelas da segunda parede: "))
@@ -62,16 +61,13 @@ if portaP4 >= 1:
    else:
         print("A altura da parede precisa ser 30cm maior que a altura da porta!")
 
-
 # Calculando a área das paredes:
 p1 = larguraP1 * alturaP1;
 p2 = larguraP2 * alturaP2;
 p3 = larguraP3 * alturaP3;
 p4 = larguraP4 * alturaP4;
 
-
-# Decisao de houver janela ou porta:
-
+# Decisao se houver janela ou porta:
 if janP1 >= 1:
     resultJanP1 = janTotalP1;
 else: 
@@ -119,7 +115,6 @@ porcentP3 = p3/2
 porcentP4 = p4/2
 
 # Se houver porta e janela, deve ocupar no máximo 50%
-
 calcP1 = 0 
 calcP2 = 0 
 calcP3 = 0 
@@ -145,7 +140,6 @@ if varP4 <= porcentP4:
 else:
     print("A área das portas e janelas são inválidos!")
     
-
 # Resultado da área das paredes:
 if p1 >= 1 and p1 <= 15:
     print("Primeira parede: ",p1,"m²")
@@ -166,7 +160,6 @@ if p4 >= 1 and p4 <= 15:
     print("Quarta parede: ",p4,"m²")
 else:
     print("Valor inválido!")
-
 
 # Calculo final de quantos litros de tinta o usuário vai precisar:
 cobertTinta = 5
