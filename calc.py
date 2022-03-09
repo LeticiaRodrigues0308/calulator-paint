@@ -36,6 +36,8 @@ portaTotalP2 = areaPorta * portaP2
 portaTotalP3 = areaPorta * portaP3
 portaTotalP4 = areaPorta * portaP4
 
+# Decisao em que a parede precisa ser 30cm maior que a porta:
+
 if portaP1 >= 1:
     if alturaP1 >= 2.20:
         print("Tamanho de porta correta!")
@@ -67,6 +69,8 @@ p2 = larguraP2 * alturaP2;
 p3 = larguraP3 * alturaP3;
 p4 = larguraP4 * alturaP4;
 
+
+# Decisao de houver janela ou porta:
 
 if janP1 >= 1:
     resultJanP1 = janTotalP1;
@@ -102,15 +106,24 @@ if portaP4 >= 1:
 else:
     resultPortaP4 = 0
 
+# Somando se houver porta e janela
 varP1 = resultPortaP1 + resultJanP1 
 varP2 = resultPortaP2 + resultJanP2 
 varP3 = resultPortaP3 + resultJanP3 
 varP4 = resultPortaP4 + resultJanP4 
 
+# Calculando a porcentagem da área da parede
 porcentP1 = p1/2
 porcentP2 = p2/2
 porcentP3 = p3/2
 porcentP4 = p4/2
+
+# Se houver porta e janela, deve ocupar no máximo 50%
+
+calcP1 = 0 
+calcP2 = 0 
+calcP3 = 0 
+calcP4 = 0 
 
 if varP1 <= porcentP1:
     calcP1 = p1 - varP1
@@ -133,7 +146,7 @@ else:
     print("A área das portas e janelas são inválidos!")
     
 
-
+# Resultado da área das paredes:
 if p1 >= 1 and p1 <= 15:
     print("Primeira parede: ",p1,"m²")
 else:
@@ -155,4 +168,56 @@ else:
     print("Valor inválido!")
 
 
+# Calculo final de quantos litros de tinta o usuário vai precisar:
+cobertTinta = 5
+lata1 = 0.5
+lata2 = 2.5
+lata3 = 3.6
+lata4 = 18
 
+somaParedes = calcP1 + calcP2 + calcP3 + calcP4
+
+latas = somaParedes/cobertTinta
+
+if latas <= 1:
+    print("Você vai precisar de ",lata1,"l + ",lata1,"l de tinta.")
+elif latas > 1 and latas <= 1.5:
+    print("Você vai precisar de ",lata2,"l de tinta.")
+elif latas >= 2 and latas < 2.5:
+    print("Você vai precisar de ",lata2,"l de tinta.")
+elif latas > 2.3 and latas <= 3:
+    print("Você vai precisar de ",lata2,"l + ",lata1,"l de tinta.")
+elif latas > 3 and latas <= 3.5:
+    print("Você vai precisar de ",lata3,"l de tinta.")
+elif latas > 3.3 and latas <= 4:
+    print("Você vai precisar de ",lata3,"l + ",lata1,"l de tinta.")
+elif latas > 4 and latas <= 4.5:
+    print("Você vai precisar de ",lata2,"l + ",lata2,"l de tinta.")
+elif latas >= 5 and latas <= 5.5:
+    print("Você vai precisar de ",lata2,"l + ",lata2,"l de tinta.")
+elif latas < 5.3 and latas <= 6:
+    print("Você vai precisar de ",lata3,"l + ",lata2,"l de tinta.")
+elif latas > 6 and latas <= 6.5:
+    print("Você vai precisar de ",lata3,"l + ",lata2,"l + ",lata1,"l de tinta.")
+elif latas > 6.3 and latas <=7:
+    print("Você vai precisar de ",lata3,"l + ",lata3,"l de tinta.")
+elif latas > 7 and latas <= 7.5:
+    print("Você vai precisar de ",lata3,"l + ",lata3,"l + ",lata1,"l de tinta.")
+elif latas > 7.3 and latas <= 8:
+    print("Você vai precisar de ",lata3,"l + ",lata2,"l + ",lata2,"l de tinta.")
+elif latas > 8 and latas <= 8.6:
+    print("Você vai precisar de ",lata3,"l + ",lata2,"l + ",lata2,"l de tinta.")
+elif latas > 8.3 and latas <= 9:
+    print("Você vai precisar de ",lata3,"l + ",lata3,"l + ",lata2,"l de tinta.")
+elif latas > 9 and latas <= 9.3:
+    print("Você vai precisar de ",lata3,"l + ",lata3,"l + ",lata2,"l de tinta.")
+elif latas > 9.3 and latas <= 10:
+    print("Você vai precisar de ",lata4,"l de tinta.")
+elif latas > 10 and latas <= 10.3:
+    print("Você vai precisar de ",lata4,"l de tinta.")
+elif latas > 10.3 and latas <= 11:
+    print("Você vai precisar de ",lata4,"l de tinta.")
+elif latas > 11.3 and latas <= 12:
+    print("Você vai precisar de ",lata4,"l de tinta.")
+else:
+    print("Os valores estão incorretos. Tente novamente!")
